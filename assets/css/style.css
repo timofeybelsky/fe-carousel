@@ -1,1 +1,79 @@
 @import "reset.css";
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+
+}
+
+.button:active{
+    transform: scale(0.9);
+}
+
+
+.slidesContainer{
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+
+.slide{
+    transition-property: all;
+    transition-delay: 0.4s;
+    display: none;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 16px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px 5px rgba(0,0,0,0.75);
+}
+
+.slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+.visibleSlide{
+    display: block;
+    height: 300px;
+    width: 400px;
+}
+
+
+.prevSlide{
+    transform-origin: left center;
+
+    right: 100%;
+    transform:translateY(-50%) translateX(100%)  scale(0.8) ;
+
+}
+
+.nextSlide{
+    transform-origin: right center;
+    right: 0;
+    transform: translateY(-50%)  scale(0.8);
+}
+
+.prevSlide, .nextSlide{
+    top: 50%;
+}
+
+.currentSlide{
+    right: 50%;
+    top: 0;
+    transform: translateX(50%);
+    z-index: 1;
+}

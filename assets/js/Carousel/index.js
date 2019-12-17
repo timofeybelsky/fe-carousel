@@ -65,6 +65,12 @@ class Carousel {
     this.currentIndex = Carousel.getPrevIndex(this.currentIndex, this.length);
   }
 
+  /**
+   *
+   * @param index - index of current elem
+   * @param length - length of iterable collection
+   * @return {number}
+   */
   static getNextIndex (index, length) {
     return (index + 1) % length;
   }
