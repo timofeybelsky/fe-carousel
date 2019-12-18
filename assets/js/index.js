@@ -14,7 +14,7 @@ class CarouselController {
     this._carousel = null;
     this._error = null;
     this._isFetching = false;
-    this.nextClick = this.nextClick.bind(this);
+    //this.nextClick = this.nextClick.bind(this);
     this.loadData(url);
   }
 
@@ -70,7 +70,7 @@ class CarouselController {
       });
   };
 
-  nextClick () {
+  nextClick = () => {
 
     const prevSlide = document.getElementById(this._carousel.prevIndex);
     const currentSlide = document.getElementById(this._carousel.currentIndex);
@@ -88,7 +88,7 @@ class CarouselController {
     nextSlide.classList.add('visibleSlide', 'nextSlide');
   };
 
-  prevClick () {
+  prevClick = () => {
 
   };
 
