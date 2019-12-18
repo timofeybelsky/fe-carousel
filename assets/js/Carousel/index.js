@@ -27,6 +27,14 @@ class Carousel {
     return this._currentIndex;
   }
 
+  get prevIndex () {
+    return Carousel.getPrevIndex(this.currentIndex, this.length);
+  }
+
+  get nextIndex () {
+    return Carousel.getNextIndex(this.currentIndex, this.length);
+  }
+
   /**
    *
    * @param {number} value
